@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="text-center" style='background-color: #424245;width: 100%;height: 50px;'>
+        <div style= 'font-size: 29px;display: inline-block;'><a style='color:aliceblue;text-decoration: none;' href="{{ url_for('index') }}">Liked</a> </div>
+        <div style=' font-size: 15px;display: inline-block;margin-left: 20px;'><a style='color: aliceblue;text-decoration: none;' href="{{ url_for('authorize') }}">Authorize</a></div>
+        <div style='font-size: 15px;display: inline-block; margin-left: 15px;'><a style='color: aliceblue;text-decoration: none;' href="{{ url_for('get_liked_videos') }}">Get Liked Videos</a></div>
+        <div style='font-size: 15px;display: inline-block; margin-left: 15px;'><a style='color: aliceblue;text-decoration: none;' href="{{ url_for('view_liked_videos') }}">View Liked Videos</a></div>
+    </nav>
+    {% block content %}{% endblock %} 
+</body>
+</html>
